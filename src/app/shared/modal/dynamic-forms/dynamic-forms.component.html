@@ -1,0 +1,17 @@
+<div [formGroup]="form">
+  <label [attr.for]="dynForm.key">{{dynForm.label | titlecase}}</label>
+
+  <div [ngSwitch]="dynForm.controlType">
+
+    <input *ngSwitchCase="'textbox'" [formControlName]="dynForm.key"
+           [id]="dynForm.key" [type]="dynForm.type">
+
+    <select [id]="dynForm.key" *ngSwitchCase="'dropdown'" [formControlName]="dynForm.key">
+      <option *ngFor="let opt of dynForm.options" [value]="opt.name">{{opt.name}}</option>
+    </select>
+
+  </div>
+
+  <div class="errorMessage" *ngIf="form.controls[dynForm.key].touched && !isValid">{{dynForm.label | titlecase}} is required</div>
+</div>
+

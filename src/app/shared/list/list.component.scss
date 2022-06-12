@@ -1,0 +1,53 @@
+.list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .list-header,
+  .list-body
+  {
+    width: 98%;
+  }
+}
+
+.list-item {
+  display: grid;
+  padding: 10px;
+}
+
+.list-body-item {
+  background: var(--main-background);
+  border-radius: 5px;
+  margin-top: 7px;
+
+  div {
+    &:last-child {
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  .edit {
+    height: 21px;
+    width: 21px;
+    background-image: var(--edit-icon);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .delete {
+    height: 21px;
+    width: 21px;
+    background-image: var(--delete-icon);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
+
+.list-body-item:hover {
+  box-shadow: 4px 3px 9px -4px var(--main-text);
+  transform: scale(1.005);
+}
+

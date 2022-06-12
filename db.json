@@ -1,0 +1,43 @@
+{
+  "genres": [
+    {
+      "id": 1,
+      "name": "Novel"
+    },
+    {
+      "id": 3,
+      "name": "Drama"
+    },
+    {
+      "id": "38487945590",
+      "name": "nn"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "first name": "Victor",
+      "last name": "Hugo",
+      "birth date": "26.02.1802",
+      "name": "Victor Hugo"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Alps and Pyrenees",
+      "author": "Victor Hugo",
+      "genre": "Poetry",
+      "published": "1890",
+      "pages": "176"
+    },
+    {
+      "id": "184.9576350",
+      "name": "sdf",
+      "published": "fsdf",
+      "pages": "sdf",
+      "genre": "Novel",
+      "author": "Victor Hugo"
+    }
+  ]
+}

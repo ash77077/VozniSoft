@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="logo">
+    <img *ngIf="isDark" height="40px" src="https://www.voznisoft.com/assets/img/icons/vozni_logo.png" alt="">
+    <img *ngIf="!isDark" height="40px" src="	https://www.voznisoft.com/assets/img/icons/vozni_logo_2.png" alt="">
+  </div>
+  <div class="tabs">
+    <div routerLink="genres" routerLinkActive="active">Genres</div>
+    <div routerLink="authors" routerLinkActive="active">Authors</div>
+    <div routerLink="books" routerLinkActive="active">Books</div>
+    <div>
+      <div (click)="changeTheme()" class="theme-mode">
+        <img *ngIf="!isDark" src="https://img.icons8.com/material-outlined/24/white/full-moon.png"/>
+        <img *ngIf="isDark" src="https://img.icons8.com/material-outlined/24/undefined/sun--v1.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="add-new-btn">
+  <button (click)="addNew()">Add New</button>
+</div>
+<router-outlet></router-outlet>
+<app-modal></app-modal>

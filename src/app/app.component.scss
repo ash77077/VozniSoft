@@ -1,0 +1,35 @@
+.theme-mode {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: var(--active);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: -1px -1px 10px #ffffff;
+  }
+}
+
+.header {
+  background-color: var(--main-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+
+    div {
+      cursor: pointer;
+    }
+  }
+}

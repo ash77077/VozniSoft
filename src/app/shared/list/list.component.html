@@ -1,0 +1,20 @@
+<div *ngIf="data" [appData]="headerNames" class="list">
+  <div class="list-header">
+    <div class="list-item">
+      <div *ngFor="let hName of headerNames">{{hName | titlecase}}</div>
+      <div>Actions</div>
+    </div>
+  </div>
+  <div class="list-body">
+    <div *ngFor="let items of data" class="list-item list-body-item">
+      <div *ngFor="let item of items | keyvalue">{{item.value}}</div>
+      <div>
+        <div class="edit" (click)="editData()"></div>
+        <div class="delete" (click)="deleteData(items)"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

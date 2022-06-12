@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  --main-background: #e6e6e6;
+  --main-text: #1d1d1d;
+  --body-bkg: #ffffff;
+  --active: #74bbee;
+  --edit-icon: url('assets/icons/edit.png');
+  --delete-icon: url('assets/icons/delete.png');
+  --close-icon: url('assets/icons/close.png');
+}
+
+body.dark-theme {
+  --main-background: #202020;
+  --main-text: #e6e6e6;
+  --body-bkg: #0f0f0f;
+  --active: #fcfc00;
+  --edit-icon: url('assets/icons/edit-dark.png');
+  --delete-icon: url('assets/icons/delete.png');
+  --close-icon: url('assets/icons/close-dark.png');
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-bkg);
+  color: var(--main-text);
+}
+
+.active {
+  color: var(--active);
+  border-bottom: 2px solid var(--active);
+}
+
+.add-new-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-top: 20px;
+
+}
+
+button {
+  outline: none;
+  background-color: var(--body-bkg);
+  font-size: 20px;
+  color: var(--main-text);
+  border: 1px solid var(--active);
+  padding: 5px 15px;
+
+  &:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--active);
+  }
+
+  &:disabled {
+    color: black;
+    background-color: darkcyan;
+  }
+}
+
+input, select {
+  width: 25vw;
+  min-width: 250px;
+  border-radius: 5px;
+  border: 3px solid;
+  border-color: var(--main-text);
+  padding: 5px 15px;
+  background-color: var(--main-background);
+  color: var(--main-text);
+  margin-bottom: 10px;
+}
+
+select {
+  width: calc(25vw + 36px);
+  min-width: 286px;
+}
+
+.errorMessage {
+  color: red;
+}

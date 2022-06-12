@@ -1,0 +1,26 @@
+<div *ngIf="data" class="modal-background">
+  <div *ngIf="!data.type.includes('confirm')" class="modal">
+    <div class="close-icon" (click)="closeModal()"></div>
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <div *ngFor="let dynForm of dynForms" class="form-row">
+        <app-dynamic-forms *ngIf="!dynForm.disabled" [dynForm]="dynForm" [form]="form"></app-dynamic-forms>
+      </div>
+
+      <div class="modal-btns">
+        <button class="confirm" type="submit" [disabled]="!form.valid" (click)="AddItem()">Save</button>
+        <button class="cancel" (click)="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="data.type.includes('confirm')" class="modal confirm-modal">
+    <div class="close-icon" (click)="closeModal()"></div>
+    <div>Are you sure you want to delete?</div>
+    <div>if you delete the data you will not be able to get it back</div>
+    <div>
+      <button class="confirm" (click)="deleteItem()">Confirm</button>
+      <button class="cancel" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
